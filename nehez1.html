@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="feecalculator">
+        <!--Város nevét adja meg hivatkozás alapján, elhelyezzük a gombokat valamint a legördülő menüsort.-->
+        <label>Adja meg a város nevét</label>
+        <select id="town" onclick="popMenu(document.feecalculator.town)">
+            <option>Válasszon várost</option>
+        </select>
+
+        <label>Adja meg a csomag sulyát (kg):</label>
+        <input type="number" name="weight" id="weight">
+        <input type="button" value="Kalkulál!" onclick="feeCalculator(document.feecalculator.town.value,document.feecalculator.weight.value)">
+
+    </form>
+    <script>
+        //Városok illetve azoknak a távolsága megadva egy tömben.
+        function popMenu(t) {
+            var townlist = [["Budapest", 232], ["Szeged", 50], ["Miskolc", 150], ["Pécs", 196], ["Győr", 42]];
+        //if függvényel, hogy csak egyszer kapjunk meg egy város.
+            if (t.options.length == 1) {
+        //for ciklus, lépteti az adott városokat, a megadott tömb illetve adatok alapján.
+                for(var i = 0; i < townlist.length; i++){
+                    var towns = townlist[i];
+                    var el = document.createElement("option");
+                    el.textContent = towns[0];
+                    el.value = towns[1];
+                    t.appendChild(el);
+                }
+            }
+        }
+
+        function feeCalculator(t,w){
+            //Kiszámítja az alap értékeket, minden adatot ennek segítségével fog kiszámítani a program.
+            var weightFee = w * 100;
+            var distanceFee = t * 150;
+            var total = weightFee + distanceFee + 2000;
+
+            alert("Alapdíj: 2000Ft," + " Súlydíj" + weightFee + "Ft," + "Km díj: " + distanceFee + "Ft," + "Összesen: " + total + "Ft")
+            //Figyelmeztető szöveg amely segítségével megkapjuk ereményeket az adatok alapján.
+                }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+
+    <!-- alapdíj:2000ft 
+    súly:100ft/kg 
+    km díj:150/km --> 
+</head> 
+
+<body> 
+    <form name="lap"> 
+        <!--Megadjuk a súlyt-->
+        <input type="number" name="suly"> 
+        <!--Távolság kiválasztása-->
+        <select name="távolság"  id=""> 
+        <!--Választható városok és távolságok a tömbből-->
+            <script> 
+                var varosok = [['Balmazújváros',28],['Hajdúböszrmény',19],['Hajdúnánás',46],['Hajdúdorog',36],['Hajdúvíd',30]]; 
+                //for ciklus, hogyan kérdezze le a választott adatpokat, index segítségével léptetve.
+                for (let i = 0; i < varosok.length; i++) { 
+                //Melyik html taget írja ki, a document.write select taghez rendelve
+                    document.write("<option value="+varosok[i][1]+">"+varosok[i][0]+"</option>"); 
+                } 
+            </script> 
+        </select> 
+        <!--gomb ezzel kezdjük meg a számolást-->
+        <input type="button" value="Ok" onclick="szamolas(document.lap.suly.value,document.lap.távolság.value)"> 
+    </form> 
+
+    <script> 
+    // változókat meghatározzuk a const-al hogy ne kaphasson más értéket
+        function szamolas(suly,tavolsag){ 
+            const ALAPDÍJ = 2000; 
+            const SÚLYDÍJ = 100; 
+            const TÁVDÍJ = 150; 
+    // a b és c változókat integerré alakítja, így csak szám lehet.
+            var b = parseInt(suly); 
+            var c = parseInt(tavolsag); 
+    //Kiszámítja az eredményt egy új változóval ami az eredm.
+            var eredm = ALAPDÍJ+b*SÚLYDÍJ+c*TÁVDÍJ; 
+    //alert segítségével írjuk ki az eredményt.
+            alert("Fizetendő: " +eredm); 
+        } 
+    </script> 
+</body> 
+
+</html> 
