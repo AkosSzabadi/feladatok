@@ -1,0 +1,78 @@
+body 
+{
+    margin:0;
+    padding:0;
+    display: border-box;
+    background-color: rgb(129, 202, 250);
+}
+#matrix_a h1 {
+    color:rgb(255, 0, 55);
+    font-size: 3vw;
+    text-align: center;
+}
+#matrix_a 
+{
+    margin:0;
+    padding:0;
+}
+#matrix_a p input {
+    background-color: rgb(255, 0, 55);
+    color:white;
+    font-size: 1.5vw;
+    text-align: center;
+    width: 10vw;
+    margin: 0.5vw;
+    padding: 0.15vw;
+}
+#matrix_a p {
+    text-align: center;
+    font-size: 1.5vw;
+    margin:0.5vw;
+    padding:0;
+    color:black;
+}
+#matrix_b h1 
+{
+    color:rgb(43, 255, 0);
+    font-size: 3vw;
+    text-align: center;
+}
+#matrix_b p input {
+    background-color: rgb(43, 255, 0);
+    color:white;
+    font-size: 1.5vw;
+    text-align: center;
+    width: 10vw;
+    margin: 0.5vw;
+    padding: 0.15vw;
+}
+#matrix_b p 
+{    
+    text-align: center;
+    font-size: 1.5vw;
+    margin:0.5vw;
+    padding:0;
+    color:black;
+}
+#matrix_b 
+{
+    padding:0;
+    margin:0;
+}
+#buttons input 
+{
+    font-size: larger;
+    text-align: center;
+    height: 2vw;
+    width: 15vw;
+    border: solid;
+    border-width: 0.2vw;
+    border-radius: 2;
+    border-color: rgb(30, 2, 83);
+    color:rgb(5, 5, 5);
+    background-color: rgb(123, 133, 179);
+}
+#buttons
+{
+    text-align: center;
+}

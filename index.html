@@ -2,60 +2,47 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Szabadi Ákos">
-    <title>A számítógépes játékok története</title>
-    <style>
-        body{
-            background-color: #F5DEB3;
-            text-decoration-color: #8B4513;
-        }
-        header{
-            text-align: center;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mátrix feladat</title>
 </head>
 <body>
-    <header>
-        <p><h1>A számítógépes játékok története</h1></p>
-    </header>    
-    <Tbody>
-        <img src="c64.png">
-        <a href="spacewar.html"><img src="kicsispacewar.png"></a>
-        <a href="pong.html"><img src="kicsipong.png"></a>
-        <a href="gameboy.html"><img src="kicsigameboy.png"></a>
-    </Tbody>
-<p>    
-A számítógépes játékok története a számítógépekével közel azonos időre vezethető vissza. 
-Az első programozók csak a maguk szórakoztatására vagy a számítógép képességeinek demonstrálására készítették számítógépes játékprogramjaikat. 
-Később jelent meg az üzlet lehetősége, ami önálló iparrá tette a számítógépes játékgyártást. 
-A számítógépekben rejlő lehetőségek bemutatására készített játékprogramok mind a mai napig fontos színterei a fejlesztéseknek. 
-Gondoljunk csak a sakkozógépre. A Deep Blue az IBM által kifejlesztett számítógép, 
-amely sakkjátékban 1997-ben egy szabályszerű hatjátszmás páros mérkőzésen 3,5-2,5 arányban legyőzte Garri Kaszparovot, 
-az emberi sakkozás akkori világbajnokát. A cél az volt, hogy bemutassák, a számítógép nem úgy gondolkozik, ahogy az ember,
-de a nyers számítási erő képes speciális esetekben az emberi gondolkodással vetekedni.
+    <div id="matrix_a">
+    <h1> A,Mátrix eleme(i):</h1>
+    <p>
+    A:<input type="number" name="a" id="a" value="0">
+    B:<input type="number" name="b" id="b" value="0"><br>
+    C:<input type="number" name="c" id="c" value="0">
+    D:<input type="number" name="d" id="d" value="0"><br>
+    E:<input type="number" name="e" id="e" value="0">
+    F:<input type="number" name="f" id="f" value="0">
 </p>
+</div>
+<div id="matrix_b">
+    <h1> B,Mátrix eleme(i)</h1>
+    <p>
+    A:<input type="number" name="a1" id="a1" value="0">
+    B:<input type="number" name="b1" id="b1" value="0">
+    C:<input type="number" name="c1" id="c1" value="0"><br>
+    D:<input type="number" name="d1" id="d1" value="0">
+    E:<input type="number" name="e1" id="e1" value="0">
+    F:<input type="number" name="f1" id="f1" value="0"><br>
+    G:<input type="number" name="g1" id="g1" value="0">
+    H:<input type="number" name="h1" id="h1" value="0">
+    I:<input type="number" name="i1" id="i1" value="0">
+</p>
+</div>
+<div id="buttons"><input type="button" onclick="matrix1(), matrix2()" value="Megadás">
+    <input type="button" onclick="matrix_szorzas()" value="Szorzása"><br>
+<span id="szorzas"></span>
+</div>
 
-Napjaink számítógépes játékainak egyik csoportosítása:
-<ol>
-    <li>Akciójáték</li>
-    <li>áték </li>
-    <li>Szerepjáték</li> 
-    <li>Szimuláció</li>
-    <li>Stratégiai játék</li>
-    <li>Tábla- és kártyajáték</li>
-    <li>Egyéb játékok</li>
-</ol>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"></script>
+    <script src="script.js"></script>
 
-
-
-
-
-
-
-
-    
 </body>
 </html>
